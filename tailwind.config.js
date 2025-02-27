@@ -1,10 +1,24 @@
+const { hairlineWidth } = require('nativewind/theme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // NOTE: Update this to include the paths to all of your component files.
-  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
-  presets: [require("nativewind/preset")],
+  darkMode: 'class',
+  content: [
+    './app/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+  ],
+  presets: [require('nativewind/preset')],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'brand-100': '#EEFBF3',
+        'brand-300': '#79DCA6',
+        'brand-500': '#43C481',
+        'brand-800': '#0D472F'
+      },
+      fontFamily: {
+        'be-vietnam': ["Be Vietnam Pro", 'serif']
+      }
+    },
   },
-  plugins: [],
-}
+  plugins: [require('tailwindcss-animate')],
+};
