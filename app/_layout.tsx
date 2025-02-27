@@ -1,23 +1,16 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import * as SplashScreen from "expo-splash-screen";
+import "react-native-reanimated";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-import { Text, View } from 'react-native';
-import { Title } from '@/components/Title';
-
+import { Text, View } from "react-native";
+import { Title } from "@/components/Title";
+import "@/global.css";
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-
   return (
-    <View>
-      <Title />
+    <View className=" rounded-xl">
+      <Text className="text-red-900">Welcome to Tailwind</Text>
     </View>
   );
 }
